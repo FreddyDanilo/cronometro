@@ -1,0 +1,55 @@
+:root{ font-size: 10px; }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+    transition: 0.25s;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgba(20, 20, 20, 1);
+}
+
+div.cronometro{
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(60, 60, 60);
+    border-radius: 5px;
+    text-align: center;
+}
+
+div.cronometro > div{ 
+    padding: 2%;
+}
+
+div.cronometro div.cronometro-tempo{
+    color: rgba(255, 255, 255, 1);
+    font-size: 4.2rem;
+}
+
+div.cronometro div.cronometro-botoes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+}
+
+div.cronometro div.cronometro-botoes button{
+    font-size: 1.6rem;
+    background-color: rgba(80, 80, 80, 1);
+    border: 0;
+    border-radius: 5px;
+    padding: 6% 2%;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+div.cronometro div.cronometro-botoes button:disabled{
+    background-color: rgba(20, 20, 20, 1);
+    cursor: default;
+}
