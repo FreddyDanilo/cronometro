@@ -21,21 +21,20 @@ const renderizar = ()=>{
             minutos = 0
             horas++
             while(horas === 24){
-                alert("Ja se passaram 24 horas")
+                alert("Já se passaram 24 horas")
                 horas = 0, minutos = 0, segundos = 0 
             }
-
         }
     }
 
-    tempo.innerHTML = ("0" + horas).slice(-2) + ":" + ("0" + minutos).slice(-2) + ":" + ("0" + segundos).slice(-2)
+    tempo.textContent = ("0" + horas).slice(-2) + ":" + ("0" + minutos).slice(-2) + ":" + ("0" + segundos).slice(-2)
 
 }
 
 const iniciar = ()=>{
     intervalo = setInterval(() => {
         renderizar()
-    }, 1000);
+    }, 1000)
 }
 
 const pausar = ()=>{
@@ -52,16 +51,16 @@ btnIniciar.onclick = ()=>{
 btnPausar.onclick = ()=>{
     pausar()
     btnPausar.setAttribute("disabled", "true")
-    btnIniciar.removeAttribute("disabled", "true")
-    btnParar.removeAttribute("disabled", "true")
-    btnIniciar.innerHTML = "Continuar"
+    btnIniciar.removeAttribute("disabled")
+    btnParar.removeAttribute("disabled")
+    btnIniciar.textContent = "Continuar"
 }
 
 btnParar.onclick = ()=>{
     segundos = -1, minutos = 0, horas = 0
     pausar()
     btnParar.setAttribute("disabled", "true")
-    btnIniciar.removeAttribute("disabled", "true")
     btnPausar.setAttribute("disabled", "true")
-    btnIniciar.innerHTML = "Reiniciar"
+    btnIniciar.removeAttribute("disabled")
+    btnIniciar.textContent = "Reiniciar"
 }

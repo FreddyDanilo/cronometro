@@ -19,7 +19,7 @@ body{
 div.cronometro{
     width: 100%;
     max-width: 400px;
-    background-color: rgba(60, 60, 60);
+    background-color: rgba(60, 60, 60, 1);
     border-radius: 5px;
     text-align: center;
 }
